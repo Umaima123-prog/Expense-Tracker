@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container auth-container">
+    <h1>Expense Tracker</h1>
+
+    <section class="card">
+      <h2>Create an account</h2>
+
+      <!-- Validation and API errors are shown here -->
+      <div id="auth-errors" class="alert alert-error" hidden></div>
+
+      <!-- data-mode tells auth-page.js which API route to call -->
+      <form id="auth-form" data-mode="register" novalidate>
+        <label>
+          Email
+          <input type="email" id="email" autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          Password (at least 6 characters)
+          <input type="password" id="password" autocomplete="new-password" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="auth-submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+    </section>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="auth-page.js"></script>
+</body>
+</html>

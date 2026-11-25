@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container auth-container">
+    <h1>Expense Tracker</h1>
+
+    <section class="card">
+      <h2>Log in</h2>
+
+      <!-- Green message after a successful registration -->
+      <div id="auth-success" class="alert alert-success" hidden></div>
+      <!-- Validation and API errors are shown here -->
+      <div id="auth-errors" class="alert alert-error" hidden></div>
+
+      <!-- data-mode tells auth-page.js which API route to call -->
+      <form id="auth-form" data-mode="login" novalidate>
+        <label>
+          Email
+          <input type="email" id="email" autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" id="password" autocomplete="current-password" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="auth-submit" class="btn btn-primary">Log in</button>
+        </div>
+      </form>
+
+      <p class="auth-switch">No account yet? <a href="register.html">Register</a></p>
+    </section>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="auth-page.js"></script>
+</body>
+</html>
